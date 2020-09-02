@@ -1,73 +1,16 @@
 {
-  "_from": "aws-lambda-graphql@1.0.0-alpha.16",
-  "_id": "aws-lambda-graphql@1.0.0-alpha.16",
-  "_inBundle": false,
-  "_integrity": "sha512-t1OfEqZmWaOxrZGsCCD3+5A+vyX86wC1josldN3LZnXK4ZsfsJ58Kmz931Jve3lapumwhctl6RnNl8Yqn46Ofg==",
-  "_location": "/aws-lambda-graphql",
-  "_phantomChildren": {
-    "@apollo/protobufjs": "1.0.5",
-    "@apollographql/apollo-tools": "0.4.8",
-    "@apollographql/graphql-playground-html": "1.6.26",
-    "@types/ws": "7.2.6",
-    "graphql-tag": "2.11.0",
-    "graphql-tools": "6.2.0",
-    "loglevel": "1.7.0",
-    "node-fetch": "2.6.0",
-    "sha.js": "2.4.11",
-    "subscriptions-transport-ws": "0.9.18",
-    "util.promisify": "1.0.1",
-    "uuid": "8.3.0"
-  },
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "aws-lambda-graphql@1.0.0-alpha.16",
-    "name": "aws-lambda-graphql",
-    "escapedName": "aws-lambda-graphql",
-    "rawSpec": "1.0.0-alpha.16",
-    "saveSpec": null,
-    "fetchSpec": "1.0.0-alpha.16"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/aws-lambda-graphql/-/aws-lambda-graphql-1.0.0-alpha.16.tgz",
-  "_shasum": "748f405aa42ce5501a17e788cd8d025210355356",
-  "_spec": "aws-lambda-graphql@1.0.0-alpha.16",
-  "_where": "C:\\Projects\\apra-amcos-portal-backend",
+  "name": "aws-lambda-graphql",
+  "version": "1.0.0-alpha.16",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "bugs": {
     "url": "https://github.com/michalkvasnicak/aws-lambda-graphql/issues"
   },
-  "bundleDependencies": false,
-  "dependencies": {
-    "@types/aws-lambda": "^8.10.36",
-    "@types/ioredis": "^4.16.6",
-    "apollo-server-core": "3.0.0-alpha.3",
-    "apollo-server-lambda": "3.0.0-alpha.3",
-    "iterall": "^1.2.2",
-    "ulid": "^2.3.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michalkvasnicak/aws-lambda-graphql"
   },
-  "deprecated": false,
-  "description": "Apollo server for AWS Lambda with WebSocket subscriptions support over API Gateway v1 + v2)",
-  "devDependencies": {
-    "apollo-link": "^1.2.14",
-    "graphql-tag": "^2.11.0",
-    "graphql-tools": "6.2.0",
-    "mock-socket": "^8.0.5",
-    "subscriptions-transport-ws": "^0.9.16",
-    "wait-for-expect": "1.1.0"
-  },
-  "engineStrict": true,
-  "engines": {
-    "node": ">=10"
-  },
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
-  "gitHead": "e3cbe5ee88c0d0cf723260d232dcacc260a8ffec",
-  "homepage": "https://github.com/michalkvasnicak/aws-lambda-graphql#readme",
+  "sideEffects": false,
   "keywords": [
     "apollo",
     "aws",
@@ -81,24 +24,41 @@
     "graphql-subscriptions",
     "serverless"
   ],
-  "main": "dist/index.js",
-  "name": "aws-lambda-graphql",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "description": "Apollo server for AWS Lambda with WebSocket subscriptions support over API Gateway v1 + v2)",
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.36",
+    "@types/ioredis": "^4.16.6",
+    "apollo-server-core": "3.0.0-alpha.3",
+    "apollo-server-lambda": "3.0.0-alpha.3",
+    "iterall": "^1.2.2",
+    "ulid": "^2.3.0"
+  },
   "peerDependencies": {
     "aws-sdk": "^2.387.0",
-    "graphql": "^14.0.2",
-    "graphql-subscriptions": "^1.0.0",
+    "graphql": "15.3.0",
+    "graphql-subscriptions": "1.1.0",
     "ioredis": "^4.17.3"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/michalkvasnicak/aws-lambda-graphql.git"
+  "engines": {
+    "node": ">=10"
+  },
+  "engineStrict": true,
+  "devDependencies": {
+    "apollo-link": "1.2.14",
+    "graphql-tag": "2.11.0",
+    "graphql-tools": "^6.2.0",
+    "mock-socket": "^8.0.5",
+    "subscriptions-transport-ws": "^0.9.18",
+    "wait-for-expect": "1.1.0"
   },
   "scripts": {
-    "build": "tsc -p .",
     "prebuild": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+    "build": "tsc -p .",
     "prepublishOnly": "rimraf dist && rimraf tsconfig.tsbuildinfo && tsc -p ."
-  },
-  "sideEffects": false,
-  "typings": "dist/index.d.ts",
-  "version": "1.0.0-alpha.16"
+  }
 }
